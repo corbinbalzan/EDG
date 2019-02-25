@@ -2,9 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
+## Installation
+Navigate to the root folder. 
+Run `npm install` 
+
+Make sure you have mongodb downloaded and ip whitelisted.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Express Server
+
+Run `nodemon server.js`. Navigate to `http://localhost:3000/`. Changes are automatically detected.
+
 
 ## Code scaffolding
 
