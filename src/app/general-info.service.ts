@@ -6,7 +6,8 @@ import { of } from 'rxjs';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';*/
 import { CHARACTERS } from './mock-data';
-@Injectable()
+@Injectable({providedIn: 'root'})
+
 export class GeneralInfoService {
   constructor() { }
 getCharacters(): Observable<any[]>{
