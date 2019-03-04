@@ -2,9 +2,9 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
-/* I do not know why "of" does not work*/
+/* I do not know why "of" does not work
 import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/delay';*/
 import { CHARACTERS } from './mock-data';
 @Injectable()
 export class GeneralInfoService {
