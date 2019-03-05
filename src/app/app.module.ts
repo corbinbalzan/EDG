@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatExpansionModule, MatProgressSpinnerModule } from '@angular/material';
+import {MatPaginator, MatTableDataSource} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
@@ -40,6 +41,8 @@ import { DataEntryComponent } from './auth/data-entry/data-entry.component';
     MatExpansionModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatPaginator,
+    MatTableDataSource
     
   ],
   providers: [],
