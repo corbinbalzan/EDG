@@ -12,8 +12,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { TableComponent } from './table/table.component';
-import { TableRowComponent } from './table-row/table-row.component';
+import { TableComponent } from '../table/table.component';
+//import { TableRowComponent } from './table-row/table-row.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { TableRowComponent } from './table-row/table-row.component';
     LoginComponent,
     SignupComponent,
     TableComponent,
-    TableRowComponent
+    //TableRowComponent
   ],
   imports: [
     BrowserModule,

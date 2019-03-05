@@ -1,0 +1,81 @@
+<!--
+  <div class="component-style table-component">
+
+  <div class="component-tag">
+    <span>app-table</span>
+  </div>
+
+  <br>
+
+  <table>
+    <tr>
+      <th *ngFor="let c of columns">{{c}}</th>
+    </tr>
+    <tr class="component-style table-row-component" *ngFor="let ch of characters | async" app-table-row [character]="ch" [columns]="columns">
+    </tr> -->
+    <!-- <app-table-row-incorrect *ngFor="let ch of characters | async" [ch]="ch" [keys]="columns"></app-table-row-incorrect> -->
+<!--  </table>
+</div>
+-->
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- age Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+    </ng-container>
+
+    <!-- dob Column -->
+    <ng-container matColumnDef="DOB">
+      <th mat-header-cell *matHeaderCellDef>  DOB </th>
+      <td mat-cell *matCellDef="let element"> {{element.DOB}} </td>
+    </ng-container>
+
+    <!-- age Column -->
+    <ng-container matColumnDef="Age">
+      <th mat-header-cell *matHeaderCellDef> Age </th>
+      <td mat-cell *matCellDef="let element"> {{element.Age}} </td>
+    </ng-container>
+
+    <!-- Gender Column -->
+    <ng-container matColumnDef="Gender">
+      <th mat-header-cell *matHeaderCellDef> Gender </th>
+      <td mat-cell *matCellDef="let element"> {{element.Gender}} </td>
+    </ng-container>Country_of_Origin
+
+    <!-- Country_of_Origin Column -->
+    <ng-container matColumnDef="Country_of_Origin">
+      <th mat-header-cell *matHeaderCellDef> Country_of_Origin </th>
+      <td mat-cell *matCellDef="let element"> {{element.Country_of_Origin}} </td>
+    </ng-container>
+
+
+    <!-- LanguageColumn -->
+    <ng-container matColumnDef="Language">
+      <th mat-header-cell *matHeaderCellDef> Language </th>
+      <td mat-cell *matCellDef="let element"> {{element.Language}} </td>
+    </ng-container>
+
+
+    <!-- Country_of_Residence Column -->
+    <ng-container matColumnDef="Country_of_Residence">
+      <th mat-header-cell *matHeaderCellDef> Country_of_Residence </th>
+      <td mat-cell *matCellDef="let element"> {{element.Country_of_Residence}} </td>
+    </ng-container>
+
+
+    <!-- Date_of_First_Contact Column -->
+    <ng-container matColumnDef="Date_of_First_Contact">
+      <th mat-header-cell *matHeaderCellDef> Date_of_First_Contact </th>
+      <td mat-cell *matCellDef="let element"> {{element.Date_of_First_Contact}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
