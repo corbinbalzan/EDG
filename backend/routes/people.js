@@ -16,7 +16,7 @@ router.post('' ,(req, res, next) => {
         firstContactDate: req.body.firstContractDate,
         timeStamp: req.body.timeStamp
     });
-    post.save().then(newPerson => {
+    person.save().then(newPerson => {
         res.status(201).json({
             message: "person added successfully!",
             postId: newPerson._id
