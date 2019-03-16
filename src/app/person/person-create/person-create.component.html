@@ -1,0 +1,38 @@
+<mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">  
+        <mat-form-field>
+            <input matInput type="text" name="name" #name="ngModel" placeholder="Name" [ngModel]="person?.name" required>
+            <mat-error *ngIf="name.invalid">Please enter a name.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="dateBirth" #dateBirth="ngModel" placeholder="Birth Date" [ngModel]="person?.dateBirth" required>
+            <mat-error *ngIf="dateBirth.invalid">Please enter a date of birth.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="age" #age="ngModel" placeholder="Age" [ngModel]="person?.age" required>
+            <mat-error *ngIf="age.invalid">Please enter an age.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="gender" #gender="ngModel" placeholder="Gender" [ngModel]="person?.gender" required>
+            <mat-error *ngIf="gender.invalid">Please enter a gender.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="countryOrigin" #countryOrigin="ngModel" placeholder="Country Of Origin" [ngModel]="person?.countryOrigin" required>
+            <mat-error *ngIf="countryOrigin.invalid">Please enter a country of origin.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="language" #language="ngModel" placeholder="Languages" [ngModel]="person?.language" required>
+            <mat-error *ngIf="language.invalid">Please enter a language.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="countryResidence" #countryResidence="ngModel" placeholder="Country Of Residence" [ngModel]="person?.countryResidence" required>
+            <mat-error *ngIf="countryResidence.invalid">Please enter a country of residence.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="firstContactDate" #firstContactDate="ngModel" placeholder="First Contact Date" [ngModel]="person?.firstContactDate" required>
+            <mat-error *ngIf="firstContactDate.invalid">Please enter the first contact date.</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit">Save Person</button>
+    </form>
+</mat-card>
