@@ -1,3 +1,22 @@
+const mongoose = require('mongoose');
+
+
+
+const personSchema = mongoose.Schema({
+    name: { type: String, required: true },
+    dateBirth: { type: Number, required: true },
+    age: {type: Number, required: true},
+    gender: {type: String, required: true },
+    countryOrigin: { type: String, required: true},
+    language: {type: String, required: true},
+    countryResidence: {type: String, required:true},
+    firstContactDate: {type: String, require: true}
+
+});
+
+module.exports = mongoose.model('Person', personSchema);
+
+/*
 export class Person {
     name;
     dateBirth;
@@ -5,8 +24,8 @@ export class Person {
     gender;
     countryOrigin;
     language;
+    countryResidence;
     firstContactDate;
-    timeStamp;
 
     constructor(){
     }
@@ -87,3 +106,5 @@ export class Person {
     }
 
 }
+*/
+

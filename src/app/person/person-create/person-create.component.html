@@ -1,6 +1,6 @@
 <mat-card>
     <mat-spinner *ngIf="isLoading"></mat-spinner>
-    <form (submit)="onSavePost(postForm)" #postForm="ngForm" *ngIf="!isLoading">  
+    <form (submit)="onSavePerson(personForm)" #personForm="ngForm" *ngIf="!isLoading">  
         <mat-form-field>
             <input matInput type="text" name="name" #name="ngModel" placeholder="Name" [ngModel]="person?.name" required>
             <mat-error *ngIf="name.invalid">Please enter a name.</mat-error>

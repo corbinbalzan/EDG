@@ -17,9 +17,9 @@ export class PeopleService{
     }
 
     getPeople(){
-        this.http.get<{message: string, person: any}>('http://localhost:3000/api/posts')
-        .pipe(map((postData) => {
-            return postData.person.map(person => {
+        this.http.get<{message: string, person: any}>('http://localhost:3000/api/people')
+        .pipe(map((personData) => {
+            return personData.person.map(person => {
                 return {
                    
 
@@ -30,32 +30,33 @@ export class PeopleService{
                     countryOrigin: person.countryOrigin,
                     language: person.language,
                     countryResidence: person.countryResidence,
-                    firstContactDate: person.f
+                    firstContactDate: person.firstContactDate,
+                    id: person._id
                 };
             });
         }))
-        .subscribe(transformedPosts => {
-            this.posts = transformedPosts;
-            this.postsUpdated.next([...this.posts]);
+        .subscribe(transformedPeople => {
+            this.people = transformedPeople;
+            this.peopleUpdated.next([...this.people]);
         });
     }
 
-    getPostUpdateListener(){
-        return this.postsUpdated.asObservable();
+    getPeopleUpdateListener(){
+        return this.peopleUpdated.asObservable();
     }
 
-    getPost(id: string){
-        return this.http.get<{_id: string, title: string, content: string}>('http://localhost:3000/api/posts/' + id);
+    getPerson(id: string){
+        return this.http.get<{_id: string, name: string, dateBirth: number, age: number, gender: string, countryOrigin: string, language: string, countryResidence: string, firstContactDate: string }>('http://localhost:3000/api/people/' + id);
     }
 
-    addPerson(title: string, content: string){
-        const post: Post = {id: null, title: title, content: content}
-        this.http.post<{message: string, postId: string}>('http://localhost:3000/api/posts', post)
+    addPerson(name: string, dateBirth: number, age: number, gender: string, countryOrigin: string, language: string, countryResidence: string, firstContactDate: string){
+        const person: Person = {id: null, name: name, dateBirth: dateBirth, age: age, gender: gender, countryOrigin: countryOrigin, language: language, countryResidence: countryResidence, firstContactDate: firstContactDate}
+        this.http.post<{message: string, personId: string}>('http://localhost:3000/api/people', person)
         .subscribe( responseData => {
-            const id = responseData.postId
-            post.id = id;
-            this.posts.push(post);
-            this.postsUpdated.next([...this.posts]);
+            const id = responseData.personId
+            person.id = id;
+            this.people.push(person);
+            this.peopleUpdated.next([...this.people]);
             this.router.navigate(["/"]);
         });
     }

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CluckComponent } from './cluck/cluck.component';
+import { PersonCreateComponent } from './person/person-create/person-create.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CluckComponent } from './cluck/cluck.component';
     PostListComponent,
     LoginComponent,
     SignupComponent,
-    CluckComponent
+    CluckComponent,
+    PersonCreateComponent
   ],
   imports: [
     BrowserModule,
