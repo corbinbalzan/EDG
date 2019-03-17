@@ -12,9 +12,10 @@ router.post('' ,(req, res, next) => {
         age: req.body.age,
         gender: req.body.age,
         countryOrigin: req.body.countryOrigin,
-        language: req.body.countryOrgin,
+        language: req.body.language,
+        countryResidence: req.body.countryResidence,
         firstContactDate: req.body.firstContactDate,
-        timeStamp: req.body.timeStamp
+        
     });
     person.save().then(newPerson => {
         res.status(201).json({
