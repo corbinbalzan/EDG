@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatExpansionModule, MatProgressSpinnerModule } from '@angular/material';
-
+import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatExpansionModule, MatProgressSpinnerModule, MatPaginatorModule, MatTableModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { NavComponent } from './nav/nav.component';
@@ -14,6 +13,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CluckComponent } from './cluck/cluck.component';
 import { PersonCreateComponent } from './person/person-create/person-create.component';
+import { DataEntryComponent } from './auth/data-entry/data-entry.component';
+import { TableComponent } from './people/table/table.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { PersonCreateComponent } from './person/person-create/person-create.comp
     SignupComponent,
     CluckComponent,
     PersonCreateComponent
+    TableComponent,
+    DataEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,8 @@ import { PersonCreateComponent } from './person/person-create/person-create.comp
     MatExpansionModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatPaginatorModule,
+    MatTableModule
     
   ],
   providers: [],
