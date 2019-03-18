@@ -12,7 +12,7 @@ export class TableComponent {
 
     people: PersonModel[] = [];
 
-    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+    displayedColumns: string[] = ['position', 'name','dateBirth','gender','age', 'language','countryResidence','firstContactDate','countryOrigin'];
     dataSource = new MatTableDataSource(this.people);
   
     applyFilter(filterValue: string) {
