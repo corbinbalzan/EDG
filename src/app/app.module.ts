@@ -11,6 +11,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { CluckComponent } from './cluck/cluck.component';
+import { PersonCreateComponent } from './person/person-create/person-create.component';
 import { DataEntryComponent } from './auth/data-entry/data-entry.component';
 import { TableComponent } from './people/table/table.component';
 
@@ -22,6 +24,8 @@ import { TableComponent } from './people/table/table.component';
     PostListComponent,
     LoginComponent,
     SignupComponent,
+    CluckComponent,
+    PersonCreateComponent
     TableComponent,
     DataEntryComponent
   ],
