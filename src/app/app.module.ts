@@ -25,7 +25,7 @@ import { TableComponent } from './people/table/table.component';
     LoginComponent,
     SignupComponent,
     CluckComponent,
-    PersonCreateComponent
+    PersonCreateComponent,
     TableComponent,
     DataEntryComponent
   ],
@@ -44,7 +44,7 @@ import { TableComponent } from './people/table/table.component';
     ReactiveFormsModule,
     MatPaginatorModule,
     MatTableModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+/*import { Component, OnInit} from '@angular/core';
 import {AuthService} from '../auth.service'
 @Component({
-   selector: 'app-newuser'
-   templateUrl: './new_user.html'
-   styleUrls:['./new_user.css']
+   selector: 'app-login'
+   templateUrl: './login.html'
+   styleUrls:['./login.css']
 })
 export class LoginComponent implements OnInit {
 
@@ -19,4 +19,4 @@ export class LoginComponent implements OnInit {
       const password = target.querySelector('#password').value
       console.log(username, password)
     }
-}
+}*/

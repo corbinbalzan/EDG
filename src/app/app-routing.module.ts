@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'cluck', component: CluckComponent},
-  {path: 'createPerson', component: PersonCreateComponent}
+  {path: 'createPerson', component: PersonCreateComponent},
   {path: 'data-entry', component: DataEntryComponent}
 
 ];
