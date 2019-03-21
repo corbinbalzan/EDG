@@ -18,7 +18,9 @@ export class PeopleService {
       .get<{ message: string; person: any }>("http://localhost:3000/api/people")
       .pipe(
         map(personData => {
-          return personData.person.map(person => {
+          return personData["people"].map(person => {
+            console.log("refreshed3!");
+
             return {
               name: person.name,
               dateBirth: person.dateBirth,
