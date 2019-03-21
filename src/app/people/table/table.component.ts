@@ -12,6 +12,7 @@ import { PeopleService } from "../people.service";
 export class TableComponent implements OnInit, OnDestroy {
   people: Person[] = [];
   private personSub: Subscription;
+  public isLoading = false;
 
   displayedColumns: string[] = [
     "position",
@@ -29,12 +30,14 @@ export class TableComponent implements OnInit, OnDestroy {
   constructor(public personService: PeopleService) {}
 
   ngOnInit() {
+    this.isLoading = true;
     this.personService.getPeople();
     this.personSub = this.personService
       .getPeopleUpdateListener()
       .subscribe((people: Person[]) => {
         this.people = people;
         this.refresh();
+        this.isLoading = false;
       });
   }
 
