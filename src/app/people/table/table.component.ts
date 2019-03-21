@@ -1,21 +1,29 @@
-import {Component} from '@angular/core';
-import {MatTableDataSource} from '@angular/material';
-import { PersonModel } from '../person.model';
+import { Component } from "@angular/core";
+import { MatTableDataSource } from "@angular/material";
+import { Person } from "../person.model";
 
 @Component({
-  selector: 'table-basic-example',
-  styleUrls: ['table.component.css'],
-  templateUrl: 'table.component.html',
+  selector: "table-basic-example",
+  styleUrls: ["table.component.css"],
+  templateUrl: "table.component.html"
 })
-
 export class TableComponent {
+  people: Person[] = [];
 
-    people: PersonModel[] = [];
+  displayedColumns: string[] = [
+    "position",
+    "name",
+    "dateBirth",
+    "gender",
+    "age",
+    "language",
+    "countryResidence",
+    "firstContactDate",
+    "countryOrigin"
+  ];
+  dataSource = new MatTableDataSource(this.people);
 
-    displayedColumns: string[] = ['position', 'name','dateBirth','gender','age', 'language','countryResidence','firstContactDate','countryOrigin'];
-    dataSource = new MatTableDataSource(this.people);
-  
-    applyFilter(filterValue: string) {
-      this.dataSource.filter = filterValue.trim().toLowerCase();
-    }
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+}

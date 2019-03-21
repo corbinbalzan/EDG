@@ -1,11 +1,11 @@
-export interface PersonModel {
-    age: number;
-    countryOrigin: string;
-    countryResidence: string;
-    dateBirth: number;
-    firstContactDate: number;
-    gender: string;
-    language: string;
+export interface Person{
+    id: string;
     name: string;
-  }
-  
+    dateBirth: number;
+    age: number;
+    gender: string;
+    countryOrigin: string;
+    language: string;
+    countryResidence: string;
+    firstContactDate: string;
+}
