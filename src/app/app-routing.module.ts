@@ -10,6 +10,7 @@ import { DataEntryComponent } from "./auth/data-entry/data-entry.component";
 import { TableComponent } from "./people/table/table.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: "", component: TableComponent },
   { path: "create", component: PostCreateComponent },
   { path: "edit/:postId", component: PostCreateComponent },
