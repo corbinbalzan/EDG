@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: "signup", component: SignupComponent },
   { path: "cluck", component: CluckComponent },
   { path: "createPerson", component: PersonCreateComponent },
-  { path: "data-entry", component: DataEntryComponent }
+  { path: "data-entry", component: DataEntryComponent },
+  { path: "search", component: TableComponent }
 ];
 
 @NgModule({
