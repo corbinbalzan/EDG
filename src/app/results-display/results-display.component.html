@@ -4,18 +4,24 @@
     <mat-expansion-panel *ngFor="let person of people">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Name: {{ person.name }} Date of Birth: {{ person.dateBirth }}
+          {{ person.name }}
         </mat-panel-title>
+        <mat-panel-description>
+          {{ person.dateBirth }}
+        </mat-panel-description>
       </mat-expansion-panel-header>
-      <p>
-        Age: {{ person.age }} Gender: {{ person.gender }} Language:
-        {{ person.language }}
-      </p>
-      <p>
-        Country Of Origin: {{ person.countryOrigin }} Country Of Residence:
-        {{ person.countryResidence }} Date Of First Contact:
-        {{ person.firstContactDate }}
-      </p>
+      <table>
+        <tr>
+          <td>Age: {{ person.age }}</td>
+          <td>Gender: {{ person.gender }}</td>
+          <td>Language: {{ person.language }}</td>
+        </tr>
+        <tr>
+          <td>Country Of Origin: {{ person.countryOrigin }}</td>
+          <td>Country Of Residence: {{ person.countryResidence }}</td>
+          <td>Date Of First Contact: {{ person.firstContactDate }}</td>
+        </tr>
+      </table>
     </mat-expansion-panel>
   </mat-accordion>
   <p class="info-text mat-body-1" *ngIf="people.length <= 0 && !isLoading">
