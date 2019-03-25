@@ -1,0 +1,16 @@
+.table-wrapper {
+  padding-top: 24px;
+}
+
+table {
+  width: 100%;
+}
+
+.filter-input {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.spinner-list {
+  margin: 0 auto;
+}

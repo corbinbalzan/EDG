@@ -8,9 +8,10 @@ import { SignupComponent } from "./auth/signup/signup.component";
 import { CluckComponent } from "./cluck/cluck.component";
 import { DataEntryComponent } from "./auth/data-entry/data-entry.component";
 import { TableComponent } from "./people/table/table.component";
+import { SearchPageComponent } from "./search-page/search-page.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "", component: TableComponent },
   { path: "create", component: PostCreateComponent },
   { path: "edit/:postId", component: PostCreateComponent },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: "cluck", component: CluckComponent },
   { path: "createPerson", component: PersonCreateComponent },
   { path: "data-entry", component: DataEntryComponent },
-  { path: "search", component: TableComponent }
+  { path: "search", component: SearchPageComponent }
 ];
 
 @NgModule({
