@@ -13,6 +13,7 @@ export class TableComponent implements OnInit, OnDestroy {
   people: Person[] = [];
   private personSub: Subscription;
   public isLoading = false;
+  
 
   displayedColumns: string[] = [
     "position",
@@ -51,5 +52,9 @@ export class TableComponent implements OnInit, OnDestroy {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  onSubmit(results){
+    console.log(results);
   }
 }
