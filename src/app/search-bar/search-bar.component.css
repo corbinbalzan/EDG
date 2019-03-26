@@ -1,3 +1,10 @@
 fields {
   white-space: nowrap;
+  display: inline-block;
+}
+.online {
+  display: inline-block;
+}
+.online.input {
+  margin-left: 30px;
 }

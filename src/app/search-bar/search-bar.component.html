@@ -1,12 +1,32 @@
 <mat-card>
+  <button
+    mat-mini-fab
+    color="accent"
+    type="Add"
+    id="add"
+    style="float: right"
+    (click)="unshow()"
+    *ngIf="show"
+  >
+    +
+  </button>
   <div id="fields">
-    <mat-form-field>
-      <select matNativeControl required>
-        <option value="name">Name</option>
-        <option value="age">Age</option>
-        <option value="birthDate">Date Of Birth</option>
-      </select>
-    </mat-form-field>
-    <input matInput name="Shearched" placeholder="search" />
+    <div class="online">
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="name">Name</option>
+          <option value="age">Age</option>
+          <option value="birthDate">Date Of Birth</option>
+          <option value="gender">Gender</option>
+          <option value="countryOrigin">Country of Origin</option>
+          <option value="language">Language</option>
+          <option value="countryResidence">Country of Residence</option>
+          <option value="firstContactDate">Date of First Contact</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div class="online" style="margin-left: 30px">
+      <input matInput name="Searched" placeholder="search" />
+    </div>
   </div>
 </mat-card>
