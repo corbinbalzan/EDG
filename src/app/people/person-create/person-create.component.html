@@ -20,7 +20,7 @@
     <mat-form-field>
       <input
         matInput
-        type="text"
+        type="date"
         name="dateBirth"
         #dateBirth="ngModel"
         placeholder="Birth Date"
@@ -79,7 +79,7 @@
         [ngModel]="person?.language"
         required
       />
-      <mat-error *ngIf="language.invalid">Please enter a language.</mat-error>
+      <mat-error *ngIf="language.invalid">Please enter language(s). If multiple, please write in the form language 1, language 2.</mat-error>
     </mat-form-field>
     <mat-form-field>
       <input
@@ -98,7 +98,7 @@
     <mat-form-field>
       <input
         matInput
-        type="text"
+        type="date"
         name="firstContactDate"
         #firstContactDate="ngModel"
         placeholder="First Contact Date"
@@ -108,6 +108,18 @@
       <mat-error *ngIf="firstContactDate.invalid"
         >Please enter the first contact date.</mat-error
       >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="typeDvHt"
+        #typeDvHt="ngModel"
+        placeholder="Type (0 for DV, 1 for HT, 2 for both)"
+        [ngModel]="person?.typeDvHt"
+        required
+      />
+      <mat-error *ngIf="typeDvHt.invalid">Please enter a type: 0 for dv, 1 for ht, 2 for both dv and ht.</mat-error>
     </mat-form-field>
     <button mat-raised-button color="accent" type="submit">Save Person</button>
   </form>

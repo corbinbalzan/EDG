@@ -1,11 +1,12 @@
 export interface Person{
     id: string;
     name: string;
-    dateBirth: number;
+    dateBirth: Date;
     age: number;
     gender: string;
     countryOrigin: string;
     language: string;
     countryResidence: string;
-    firstContactDate: string;
+    firstContactDate: Date;
+    typeDvHt: number;
 }

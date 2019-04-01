@@ -49,25 +49,27 @@ export class PeopleService {
     return this.http.get<{
       _id: string;
       name: string;
-      dateBirth: number;
+      dateBirth: Date;
       age: number;
       gender: string;
       countryOrigin: string;
       language: string;
       countryResidence: string;
-      firstContactDate: string;
+      firstContactDate: Date;
+      typeDvHt: number;
     }>("http://localhost:3000/api/people/" + id);
   }
 
   addPerson(
     name: string,
-    dateBirth: number,
+    dateBirth: Date,
     age: number,
     gender: string,
     countryOrigin: string,
     language: string,
     countryResidence: string,
-    firstContactDate: string
+    firstContactDate: Date,
+    typeDvHt: number
   ) {
     const person: Person = {
       id: null,
@@ -78,7 +80,8 @@ export class PeopleService {
       countryOrigin: countryOrigin,
       language: language,
       countryResidence: countryResidence,
-      firstContactDate: firstContactDate
+      firstContactDate: firstContactDate,
+      typeDvHt: typeDvHt
     };
     this.http
       .post<{ message: string; personId: string }>(

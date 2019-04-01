@@ -19,6 +19,7 @@ export class PersonCreateComponent implements OnInit {
   enteredLanguage = "";
   enteredCountryResidence = "";
   enteredFirstContactDate = "";
+  enteredTypeDvHt = "";
 
   public person: Person;
   public isLoading = false;
@@ -47,7 +48,8 @@ export class PersonCreateComponent implements OnInit {
             countryOrigin: personData.countryOrigin,
             language: personData.language,
             countryResidence: personData.countryResidence,
-            firstContactDate: personData.firstContactDate
+            firstContactDate: personData.firstContactDate,
+            typeDvHt: personData.typeDvHt
           };
         });
       } else {
@@ -71,7 +73,8 @@ export class PersonCreateComponent implements OnInit {
         form.value.countryOrigin,
         form.value.language,
         form.value.countryResidence,
-        form.value.firstContactDate
+        form.value.firstContactDate,
+        form.value.typeDvHt
       );
     }
     form.resetForm();

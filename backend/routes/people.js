@@ -13,7 +13,8 @@ router.post("", (req, res, next) => {
     countryOrigin: req.body.countryOrigin,
     language: req.body.language,
     countryResidence: req.body.countryResidence,
-    firstContactDate: req.body.firstContactDate
+    firstContactDate: req.body.firstContactDate,
+    typeDvHt: req.body.typeDvHt
   });
   person.save().then(newPerson => {
     res.status(201).json({

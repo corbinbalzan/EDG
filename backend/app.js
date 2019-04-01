@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const postsRoutes = require('./routes/posts');
 const peopleRoutes = require('./routes/people');
 const userRoutes = require('./routes/user');
+const htRoutes = require('./routes/htPeople');
+const dvRoutes = require('./routes/dvPeople');
 
 const app = express();
 
@@ -30,5 +32,8 @@ app.use((req, res, next) => {
 app.use("/api/posts", postsRoutes);
 app.use("/api/people", peopleRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/htPeople", htRoutes);
+app.use("/api/dvPeople", dvRoutes);
+
 
 module.exports = app;
