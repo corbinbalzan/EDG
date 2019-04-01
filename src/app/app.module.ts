@@ -11,7 +11,8 @@ import {
   MatExpansionModule,
   MatProgressSpinnerModule,
   MatPaginatorModule,
-  MatTableModule
+  MatTableModule,
+  MatIconModule
 } from "@angular/material";
 import { AppComponent } from "./app.component";
 import { PostCreateComponent } from "./posts/post-create/post-create.component";
@@ -24,6 +25,9 @@ import { CluckComponent } from "./cluck/cluck.component";
 import { DataEntryComponent } from "./auth/data-entry/data-entry.component";
 import { TableComponent } from "./people/table/table.component";
 import { PersonCreateComponent } from "./people/person-create/person-create.component";
+import { SearchBarComponent } from "./search-bar/search-bar.component";
+import { SearchPageComponent } from "./search-page/search-page.component";
+import { ResultsDisplayComponent } from "./results-display/results-display.component";
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import { PersonCreateComponent } from "./people/person-create/person-create.comp
     CluckComponent,
     PersonCreateComponent,
     TableComponent,
-    DataEntryComponent
+    DataEntryComponent,
+    SearchBarComponent,
+    SearchPageComponent,
+    ResultsDisplayComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,8 @@ import { PersonCreateComponent } from "./people/person-create/person-create.comp
     HttpClientModule,
     ReactiveFormsModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

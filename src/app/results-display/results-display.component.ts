@@ -1,19 +1,18 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { MatTableDataSource } from "@angular/material";
-import { Person } from "../person.model";
+import { Person } from "../people/person.model";
 import { Subscription } from "rxjs";
-import { PeopleService } from "../people.service";
+import { PeopleService } from "../people/people.service";
 
 @Component({
-  selector: "table-basic-example",
-  styleUrls: ["table.component.css"],
-  templateUrl: "table.component.html"
+  selector: "app-results-display",
+  templateUrl: "./results-display.component.html",
+  styleUrls: ["./results-display.component.css"]
 })
-export class TableComponent implements OnInit, OnDestroy {
+export class ResultsDisplayComponent implements OnInit, OnDestroy {
   people: Person[] = [];
   private personSub: Subscription;
   public isLoading = false;
-  
 
   displayedColumns: string[] = [
     "position",
@@ -52,9 +51,5 @@ export class TableComponent implements OnInit, OnDestroy {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
-
-  onSubmit(results){
-    console.log(results);
   }
 }

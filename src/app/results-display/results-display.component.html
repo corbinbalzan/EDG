@@ -1,0 +1,26 @@
+<div class="table-wrapper">
+  <mat-spinner *ngIf="isLoading" class="spinner-list"></mat-spinner>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let person of people">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ person.name }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ person.dateBirth }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <table>
+        <tr>Age: {{ person.age }}</tr>
+        <tr>Gender: {{ person.gender }}</tr>
+        <tr>Language: {{ person.language }}</tr>
+        <tr>Country Of Origin: {{ person.countryOrigin }}</tr>
+        <tr>Country Of Residence: {{ person.countryResidence }}</tr>
+        <tr>Date Of First Contact: {{ person.firstContactDate }}</tr>
+      </table>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <p class="info-text mat-body-1" *ngIf="people.length <= 0 && !isLoading">
+    No People added yet
+  </p>
+</div>

@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let count of counted">
+    <app-search-bar (another)="anotherSearch()"></app-search-bar>
+  </li>
+</ul>
+<button mat-raised-button color="accent" type="submit" id="sub">
+  Search
+</button>
+<app-results-display></app-results-display>
